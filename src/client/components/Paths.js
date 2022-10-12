@@ -1,17 +1,20 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { Home } from './Home';
-
-const R = () => {
+import { Members } from './Members';
+import { Standings } from './Standings';
+const Paths = () => {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="#" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/standings" element={<Standings />} />
         </Routes>
       </Router>
     </div>
   );
 };
 
-export default R;
+export default Paths;
